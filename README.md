@@ -17,3 +17,5 @@ Remove  |__O(n)__|__O(1)__|
 ```
 
 📌 <a href="binary_search/binary_search.go">Binary search</a>
+
+📌 <a href="breadth_first_search/breadth_first_search.go">Breadth-first search</a>
