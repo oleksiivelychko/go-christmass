@@ -25,3 +25,5 @@ Remove  |__O(n)__|__O(1)__|
 📌 <a href="factorial/factorial.go">Factorial</a>
 
 📌 <a href="fibonacci/fibonacci.go">Fibonacci</a>
+
+📌 <a href="insertion_sort/insertion_sort.go">Insertion sort</a>
