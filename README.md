@@ -33,3 +33,5 @@ Remove  |__O(n)__|__O(1)__|
 📌 <a href="smallest_search/smallest_search.go">Smallest search</a>
 
 📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
+
+📌 <a href="tree_traversal/tree_traversal.go">Tree traversal</a>
