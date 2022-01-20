@@ -35,3 +35,5 @@ Remove  |__O(n)__|__O(1)__|
 📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
 
 📌 <a href="tree_traversal/tree_traversal.go">Tree traversal</a>
+
+📌 <a href="two_sum/two_sum.go">Two sum [leetcode - easy]</a>
