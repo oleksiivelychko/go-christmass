@@ -16,8 +16,6 @@ Write   |__O(n)__|__O(1)__|
 Remove  |__O(n)__|__O(1)__|
 ```
 
-📌 <a href="add_two_numbers/add_two_numbers.go">Add two numbers [leetcode - medium]</a>
-
 📌 <a href="binary_search/binary_search.go">Binary search</a>
 
 📌 <a href="breadth_first_search/breadth_first_search.go">Breadth-first search</a>
@@ -39,5 +37,3 @@ Remove  |__O(n)__|__O(1)__|
 📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
 
 📌 <a href="tree_traversal/tree_traversal.go">Tree traversal</a>
-
-📌 <a href="two_sum/two_sum.go">Two sum [leetcode - easy]</a>
