@@ -49,7 +49,7 @@ func findLowestCostNode(costs map[string]float64, processed []string) string {
 
 	for node := range costs {
 		cost := costs[node]
-		_, found := in.StringIn(processed, node)
+		_, found := in.In(processed, node)
 		if cost < lowestCost && !found {
 			lowestCost = cost
 			lowestCostNode = node

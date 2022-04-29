@@ -27,7 +27,7 @@ func BreadthFirstSearch(graph map[string][]string, target string, nodeSource str
 		item := dequeue[0]
 		dequeue = pop.StringPop(dequeue, 0)
 
-		_, alreadyAdded := in.StringIn(searched, item)
+		_, alreadyAdded := in.In(searched, item)
 		if alreadyAdded {
 			continue
 		}
