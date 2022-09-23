@@ -1,7 +1,6 @@
 package breadth_first_search
 
 import (
-	"github.com/oleksiivelychko/go-helper/cmp"
 	"github.com/oleksiivelychko/go-helper/in"
 	"github.com/oleksiivelychko/go-helper/pop"
 )
@@ -34,8 +33,7 @@ func BreadthFirstSearch(graph map[string][]string, target string, nodeSource str
 			continue
 		}
 
-		found := cmp.StringCmp(item, target)
-		if found {
+		if found := item == target; found {
 			return item
 		}
 
