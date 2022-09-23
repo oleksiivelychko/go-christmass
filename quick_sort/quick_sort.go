@@ -7,7 +7,7 @@ Best case (pivot is the middle) is O(n) * O(log n) = O(n log n)
 Worst case (pivot is the first) is O(n) * O(n) = O(n^2)
 
 1. Select item as pivot.
-2. Compare items - all items less than pivot move before it, all items greater than pivot move after it.
+2. Compare items - all items less than pivot value move before it, all items greater than pivot move after it.
 3. Repeat steps 1,2 towards arrays - left and right between pivot.
 */
 func QuickSort(slice []int) []int {

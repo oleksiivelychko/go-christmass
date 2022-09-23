@@ -9,6 +9,8 @@ import (
 /*
 BreadthFirstSearch
 
+Breadth-first search (BFS) is an algorithm for searching a tree data structure for a node that satisfies a given property.
+
 O(V+E), V is number of vertices, E is number of edges.
 Only for unweighted graphs.
 

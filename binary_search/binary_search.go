@@ -9,8 +9,8 @@ log2(8)=3 attempts required to find value (operation opposite to exponentiation)
 Array must be sortable before.
 
 1. Pick middle item.
-2. If middle item less than value then search will be in left side of array.
-3. If middle item greater than value then search will be in right side of array.
+2. If middle item less than searchable value then search is going to be on the left side of array.
+3. If middle item greater than searchable value then search is going to be on the right side of array.
 4. Repeat steps until target won't be found.
 */
 func BinarySearch(array []int, target int) (bool, int) {

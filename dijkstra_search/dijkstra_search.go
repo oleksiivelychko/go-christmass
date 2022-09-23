@@ -9,7 +9,7 @@ import (
 DijkstraSearch
 
 Only for weighted graphs.
-Weighted graph - a graph in which each edge is assigned some weight(value) e.g. number.
+Weighted graph - a graph in which each edge has assigned some weight(value) e.g. number.
 For negative weights must be used Bellman–Ford algorithm.
 
 1. Each vertex has minimal-known distance (costs) to V(start).
