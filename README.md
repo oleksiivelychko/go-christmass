@@ -14,6 +14,8 @@
 
 📌 <a href="insertion_sort/insertion_sort.go">Insertion sort</a>
 
+📌 <a href="matrix/matrix.go">Make a matrix</a>
+
 📌 <a href="quick_sort/quick_sort.go">Quick sort</a>
 
 📌 <a href="reverse_array/reverse_array.go">Reverse array</a>
