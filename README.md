@@ -16,6 +16,8 @@
 
 📌 <a href="matrix/matrix.go">Make a matrix</a>
 
+📌 <a href="list_pop/list_pop.go">Pop item from list</a>
+
 📌 <a href="quick_sort/quick_sort.go">Quick sort</a>
 
 📌 <a href="reverse_array/reverse_array.go">Reverse array</a>

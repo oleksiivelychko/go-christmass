@@ -1,10 +1,11 @@
 package selection_sort
 
 import (
-	"github.com/oleksiivelychko/go-helper/pop"
+	"github.com/oleksiivelychko/go-computer-science/list_pop"
 )
 
-/*InsertionSort
+/*
+InsertionSort
 
 O(n^2)
 
@@ -19,7 +20,7 @@ func InsertionSort(slice []int) []int {
 	for i := 0; i < length; i++ {
 		smallestIndex := findSmallestIndex(slice)
 		newSlice[i] = slice[smallestIndex]
-		slice = pop.IntPop(slice, smallestIndex)
+		slice = list_pop.ListPop(slice, smallestIndex)
 	}
 
 	return newSlice
