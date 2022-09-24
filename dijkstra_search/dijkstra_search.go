@@ -1,7 +1,7 @@
 package dijkstra_search
 
 import (
-	"github.com/oleksiivelychko/go-helper/in"
+	"github.com/oleksiivelychko/go-computer-science/in_array"
 	"math"
 )
 
@@ -49,7 +49,7 @@ func findLowestCostNode(costs map[string]float64, processed []string) string {
 
 	for node := range costs {
 		cost := costs[node]
-		_, found := in.In(processed, node)
+		_, found := in_array.InArray(processed, node)
 		if cost < lowestCost && !found {
 			lowestCost = cost
 			lowestCostNode = node

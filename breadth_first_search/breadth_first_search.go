@@ -1,8 +1,8 @@
 package breadth_first_search
 
 import (
+	"github.com/oleksiivelychko/go-computer-science/in_array"
 	"github.com/oleksiivelychko/go-computer-science/list_pop"
-	"github.com/oleksiivelychko/go-helper/in"
 )
 
 /*
@@ -28,7 +28,7 @@ func BreadthFirstSearch(graph map[string][]string, target string, nodeSource str
 		item := dequeue[0]
 		dequeue = list_pop.ListPop(dequeue, 0)
 
-		_, alreadyAdded := in.In(searched, item)
+		_, alreadyAdded := in_array.InArray(searched, item)
 		if alreadyAdded {
 			continue
 		}
