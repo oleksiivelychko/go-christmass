@@ -34,3 +34,4 @@
 ```
 go test -bench=. ./dirname
 ```
+![Passed tests](social_preview.png)
