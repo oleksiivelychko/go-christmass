@@ -1,7 +1,7 @@
 package list_pop
 
 type IList interface {
-	int | int8 | int16 | int32 | int64 | string
+	int | string
 }
 
 func ListPop[L IList](array []L, index int) []L {
