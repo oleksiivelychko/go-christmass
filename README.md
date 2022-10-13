@@ -16,6 +16,8 @@
 
 📌 <a href="insertion_sort/insertion_sort.go">Insertion sort</a>
 
+📌 <a href="interfaces/interfaces.go">Interfaces</a>
+
 📌 <a href="matrix/matrix.go">Make a matrix</a>
 
 📌 <a href="list_pop/list_pop.go">Pop item from list</a>
