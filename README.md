@@ -1,4 +1,4 @@
-# computer-science
+# go-computer-science
 
 ### The collection of the algorithms, data structures and design patterns to speed up the development process for most-daily cases.
 
@@ -28,6 +28,8 @@
 
 📌 <a href="smallest_search/smallest_search.go">Smallest search</a>
 
+📌 <a href="subsequences_search/subset_sum.go">Subset sum</a>
+
 📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
 
 📌 <a href="tree_traversal/tree_traversal.go">Tree traversal</a>
@@ -36,4 +38,4 @@
 ```
 go test -bench=. ./dirname
 ```
-![Passed tests](social_preview.png)
+![tests](social_preview.png)
