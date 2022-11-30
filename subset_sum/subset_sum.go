@@ -3,7 +3,7 @@ package subset_sum
 /*
 SubsetSum - NP-complete task (doesn't exist efficient solution).
 */
-func SubsetSum(set []int, n int, sum int) bool {
+func SubsetSum(set []int, n, sum int) bool {
 	if sum == 0 {
 		return true
 	}
