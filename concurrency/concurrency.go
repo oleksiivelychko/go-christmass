@@ -30,7 +30,10 @@ func (c *SafeCounter) Value(key string) int {
 
 /*
 A goroutine is a lightweight thread managed by the Go runtime.
+A goroutine an abstraction over threads, a single OS thread can run many goroutines.
+A goroutine takes about 2kb of stack space to initialize.
 Goroutines run in the same address space, so access to shared memory must be synchronized.
+Goroutine are not hardware dependent and does not have ID because go does not have Thread Local Storage.
 */
 func goroutine(s string) {
 	for i := 0; i < 2; i++ {
@@ -40,6 +43,7 @@ func goroutine(s string) {
 }
 
 /*
+Goroutines have easy communication (with low latency) medium known as channel.
 By default, sends and receives block until the other side is ready.
 This allows goroutines to synchronize without explicit locks or condition variables.
 */
@@ -66,5 +70,19 @@ func selectChannel(tickCh chan string, quitCh chan int) {
 			fmt.Println("quit")
 			return // loop exit
 		}
+	}
+}
+
+func waitWorkers(wg *sync.WaitGroup) {
+	for i := 1; i <= 3; i++ {
+		wg.Add(1) // equals to count (2 times) of goroutines would be run
+
+		go func(id int) {
+			defer wg.Done() // alerting the WaitGroup when a goroutine completes
+
+			fmt.Printf("Worker %d starting\n", id)
+			time.Sleep(time.Second)
+			fmt.Printf("Worker %d done\n", id)
+		}(i)
 	}
 }

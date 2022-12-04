@@ -2,11 +2,17 @@ package concurrency
 
 import (
 	"fmt"
+	"runtime"
+	"sync"
 	"testing"
 	"time"
 )
 
 func TestGoroutine(t *testing.T) {
+	// determines how many threads that program will use simultaneously
+	// swapping between threads is a relatively slow operation
+	runtime.GOMAXPROCS(2)
+
 	defer func() {
 		if r := recover(); r != nil {
 			t.Errorf("[func goroutine(s string)] -> %s:", r)
@@ -17,13 +23,14 @@ func TestGoroutine(t *testing.T) {
 	goroutine("sync")
 }
 
+/*
+Non-buffered channels are blocking, meaning that when sending data into a channel, Go waits until the data is read from the channel before execution continues.
+Buffered channels, meaning sending data into that channel won’t block until exceed the capacity.
+*/
 func TestChannel(t *testing.T) {
 	s := []int{7, 2, 8, -9, 4, 0}
 
-	// make buffered channel
-	// sends to a buffered channel block only when the buffer is full
-	// receives block from channel when the buffer is empty
-	ch := make(chan int, 2)
+	ch := make(chan int, 2) // make buffered channel
 
 	go channel(ch, s[:len(s)/2])
 	go channel(ch, s[len(s)/2:])
@@ -74,4 +81,20 @@ func TestMutex(t *testing.T) {
 	if c.Value("counter") != 3 {
 		t.Errorf("[func (c *SafeCounter) Value(key string) int]: %d != 3", c.Value("counter"))
 	}
+}
+
+func TestWaitGroups(t *testing.T) {
+	defer func() {
+		if r := recover(); r != nil {
+			t.Errorf("[func waitWorkers(wg *sync.WaitGroup)] -> %s:", r)
+		}
+	}()
+
+	// is used to wait for all the goroutines launched here to finish
+	var wg sync.WaitGroup
+
+	waitWorkers(&wg)
+
+	// block the execution until the WaitGroup counter goes back to 0, all the workers notified they’re done.
+	wg.Wait()
 }
