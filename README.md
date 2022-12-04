@@ -6,6 +6,8 @@
 
 📌 <a href="breadth_first_search/breadth_first_search.go">Breadth-first search</a>
 
+📌 <a href="concurrency/concurrency.go">Concurrency pattern</a>
+
 📌 <a href="dijkstra_search/dijkstra_search.go">Dijkstra's search</a>
 
 📌 <a href="factorial/factorial.go">Factorial</a>
@@ -34,8 +36,11 @@
 
 📌 <a href="tree_traversal/tree_traversal.go">Tree traversal</a>
 
-💡 Run tests as:
+💡 Run tests with benchmarks for specific package:
 ```
-go test -bench=. ./dirname
+go test -bench=. ./package_name
 ```
+...when the output `BenchmarkPackageName-8                 41410035                29.00 ns/op` 
+means that the loop ran 41410035 times at a speed of 29.00 ns per loop.
+
 ![tests](social_preview.png)
