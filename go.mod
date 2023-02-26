@@ -1,3 +1,3 @@
 module github.com/oleksiivelychko/go-computer-science
 
-go 1.19
+go 1.20
