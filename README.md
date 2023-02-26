@@ -30,7 +30,7 @@
 
 📌 <a href="smallest_search/smallest_search.go">Smallest search</a>
 
-📌 <a href="subsequences_search/subset_sum.go">Subset sum</a>
+📌 <a href="subset_sum/subset_sum.go">Subset sum</a>
 
 📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
 
