@@ -4,13 +4,6 @@ import (
 	"testing"
 )
 
-/**
--________|__Array_|__List__|
-| Read   |  O(1)  |  O(n)  |
-| Write  |  O(n)  |  O(1)  |
-| Remove |  O(n)  |  O(1)  |
-*/
-
 func makeSlice() []int {
 	var slice = make([]int, 5, 5)
 	slice[0] = 1
