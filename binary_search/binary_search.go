@@ -4,14 +4,14 @@ package binary_search
 BinarySearch
 
 O(log n)
-log2(8)=3 attempts required to find value (operation opposite to exponentiation).
+log2(8)=3 attempts are required to find value (operation opposite to exponentiation).
 
-Array must be sortable before.
+Array must be sorted before.
 
 1. Pick middle item.
-2. If middle item less than searchable value then search is going to be on the left side of array.
-3. If middle item greater than searchable value then search is going to be on the right side of array.
-4. Repeat steps until target won't be found.
+2. If middle item less than desired value then search is going to be on the left side of array.
+3. If middle item greater than desired value then search is going to be on the right side of array.
+4. Repeat steps until target will not be found.
 */
 func BinarySearch(array []int, target int) (bool, int) {
 
