@@ -5,7 +5,8 @@ import (
 )
 
 /*
-  | m | i | s | h |			| f | o | s | h |
+	| m | i | s | h |			| f | o | s | h |
+
 ___________________		  ___________________
 f | 0 | 0 | 0 | 0 |       f | 1 | 0 | 0 | 0 |
 __|___|___|___|___|       __|___|___|___|___|
@@ -21,6 +22,7 @@ func TestSubsequencesSearch(t *testing.T) {
 	if sCount != 3 {
 		t.Errorf("[func SubsequencesSearch(word1, word2 string) int] -> %d != 3", sCount)
 	}
+
 	sCount = SubsequencesSearch("fish", "fosh")
 	if sCount != 2 {
 		t.Errorf("[func SubsequencesSearch(word1, word2 string) int] -> %d != 2", sCount)

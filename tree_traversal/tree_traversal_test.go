@@ -12,14 +12,17 @@ func initTree() *Node {
 	tree.left.left.right = &Node{4, nil, nil}
 	tree.left.right = &Node{5, nil, nil}
 	tree.right = &Node{6, nil, nil}
+
 	return tree
 }
 
 func TestNode(t *testing.T) {
 	node := &Node{0, &Node{1, nil, nil}, &Node{2, nil, nil}}
+
 	if node.left.value != 1 {
 		t.Errorf("[type Node struct] -> %d != 1", node.left.value)
 	}
+
 	if node.right.value != 2 {
 		t.Errorf("[type Node struct] -> %d != 2", node.right.value)
 	}

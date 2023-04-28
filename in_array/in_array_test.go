@@ -5,8 +5,7 @@ import "testing"
 var array = []string{"one", "two", "three"}
 
 /*
-*
--________|__Array_|__List__|
+|________|__Array_|__List__|
 | Read   |  O(1)  |  O(n)  |
 | Write  |  O(n)  |  O(1)  |
 | Remove |  O(n)  |  O(1)  |
