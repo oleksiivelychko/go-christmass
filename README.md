@@ -1,46 +1,44 @@
 # go-computer-science
 
-### The collection of the algorithms, data structures and design patterns to speed up the development process for most-daily cases.
+### The collection of algorithms, data structures and design patterns.
 
-📌 <a href="binary_search/binary_search.go">Binary search</a>
+📌 [Binary search](binary_search/binary_search.go)
 
-📌 <a href="breadth_first_search/breadth_first_search.go">Breadth-first search</a>
+📌 [Breadth-first search](breadth_first_search/breadth_first_search.go)
 
-📌 <a href="concurrency/concurrency.go">Concurrency pattern</a>
+📌 [Concurrency pattern](concurrency/concurrency.go)
 
-📌 <a href="dijkstra_search/dijkstra_search.go">Dijkstra's search</a>
+📌 [Dijkstra's search](dijkstra_search/dijkstra_search.go)
 
-📌 <a href="factorial/factorial.go">Factorial</a>
+📌 [Factorial](factorial/factorial.go)
 
-📌 <a href="fibonacci/fibonacci.go">Fibonacci</a>
+📌 [Fibonacci](fibonacci/fibonacci.go)
 
-📌 <a href="in_array/in_array.go">Checks if a value exists in an array</a>
+📌 [In array](in_array/in_array.go)
 
-📌 <a href="insertion_sort/insertion_sort.go">Insertion sort</a>
+📌 [Insertion sort](insertion_sort/insertion_sort.go)
 
-📌 <a href="interfaces/interfaces.go">Interfaces</a>
+📌 [Interfaces](interfaces/interfaces.go)
 
-📌 <a href="matrix/matrix.go">Make a matrix</a>
+📌 [Matrix](matrix/matrix.go)
 
-📌 <a href="list_pop/list_pop.go">Pop item from list</a>
+📌 [Pop from list](list_pop/list_pop.go)
 
-📌 <a href="quick_sort/quick_sort.go">Quick sort</a>
+📌 [Quick sort](quick_sort/quick_sort.go)
 
-📌 <a href="reverse_array/reverse_array.go">Reverse array</a>
+📌 [Reverse array](reverse_array/reverse_array.go)
 
-📌 <a href="smallest_search/smallest_search.go">Smallest search</a>
+📌 [Smallest search](smallest_search/smallest_search.go)
 
-📌 <a href="subset_sum/subset_sum.go">Subset sum</a>
+📌 [Subset sum](subset_sum/subset_sum.go)
 
-📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
+📌 [Subsequences search](subsequences_search/subsequences_search.go)
 
-📌 <a href="tree_traversal/tree_traversal.go">Tree traversal</a>
+📌 [Tree traversal](tree_traversal/tree_traversal.go)
 
-💡 Run tests with benchmarks for specific package:
+💡 Run tests with benchmarks for the package:
 ```
 go test -bench=. ./package_name
 ```
 ...when the output `BenchmarkPackageName-8                 41410035                29.00 ns/op` 
 means that the loop ran 41410035 times at a speed of 29.00 ns per loop.
-
-![tests](social_preview.png)
