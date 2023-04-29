@@ -1,4 +1,4 @@
-.idea
+/.idea
 *go_test*.html
 *.pages
 main.go
