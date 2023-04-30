@@ -2,8 +2,6 @@
 
 ### The collection of algorithms, data structures and design patterns.
 
-📌 [Breadth-first search](breadth_first_search/breadth_first_search.go)
-
 📌 [Concurrency pattern](concurrency/concurrency.go)
 
 📌 [Dijkstra's search](dijkstra_search/dijkstra_search.go)
