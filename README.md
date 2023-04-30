@@ -20,8 +20,6 @@
 
 📌 [Pop from list](list_pop/list_pop.go)
 
-📌 [Quick sort](quick_sort/quick_sort.go)
-
 📌 [Reverse array](reverse_array/reverse_array.go)
 
 📌 [Smallest search](smallest_search/smallest_search.go)
