@@ -1,7 +1,7 @@
 package selection_sort
 
 import (
-	"github.com/oleksiivelychko/go-computer-science/list_pop"
+	"github.com/oleksiivelychko/computer-science/list_pop"
 )
 
 /*

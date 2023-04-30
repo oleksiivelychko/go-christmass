@@ -1,7 +1,7 @@
 package subsequences_search
 
 import (
-	"github.com/oleksiivelychko/go-computer-science/matrix"
+	"github.com/oleksiivelychko/computer-science/matrix"
 	"math"
 )
 

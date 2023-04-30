@@ -1,8 +1,8 @@
 package breadth_first_search
 
 import (
-	"github.com/oleksiivelychko/go-computer-science/in_array"
-	"github.com/oleksiivelychko/go-computer-science/list_pop"
+	"github.com/oleksiivelychko/computer-science/in_array"
+	"github.com/oleksiivelychko/computer-science/list_pop"
 )
 
 /*

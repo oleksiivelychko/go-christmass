@@ -1,7 +1,7 @@
 package dijkstra_search
 
 import (
-	"github.com/oleksiivelychko/go-computer-science/in_array"
+	"github.com/oleksiivelychko/computer-science/in_array"
 	"math"
 )
 
