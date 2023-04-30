@@ -12,8 +12,6 @@
 
 📌 [In array](in_array/in_array.go)
 
-📌 [Insertion sort](insertion_sort/insertion_sort.go)
-
 📌 [Interfaces](interfaces/interfaces.go)
 
 📌 [Matrix](matrix/matrix.go)
