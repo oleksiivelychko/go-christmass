@@ -1,3 +1,7 @@
+/*
+BenchmarkSubsetSum
+BenchmarkSubsetSum-8   	 4042200	       293.7 ns/op
+*/
 package subset_sum
 
 import (
@@ -8,30 +12,20 @@ import (
 
 func TestSubsetSum(t *testing.T) {
 	set := []int{3, 4, 5, 2}
-
-	isSubsetSum := SubsetSum(set, len(set)-1, 9)
-	if isSubsetSum != true {
-		t.Errorf("[func SubsetSum(set []int, n, sum int) bool] -> %t != true", isSubsetSum)
+	if !SubsetSum(set, len(set)-1, 9) {
+		t.Error("calculation is wrong")
 	}
-
-	isSubsetSum = SubsetSum(set, len(set)-1, 10)
-	if isSubsetSum != true {
-		t.Errorf("[func SubsetSum(set []int, n, sum int) bool] -> %t != true", isSubsetSum)
+	if !SubsetSum(set, len(set)-1, 10) {
+		t.Error("calculation is wrong")
 	}
-
-	isSubsetSum = SubsetSum(set, len(set)-1, 11)
-	if isSubsetSum != true {
-		t.Errorf("[func SubsetSum(set []int, n, sum int) bool] -> %t != true", isSubsetSum)
+	if !SubsetSum(set, len(set)-1, 11) {
+		t.Error("calculation is wrong")
 	}
-
-	isSubsetSum = SubsetSum(set, len(set)-1, 12)
-	if isSubsetSum != true {
-		t.Errorf("[func SubsetSum(set []int, n, sum int) bool] -> %t != true", isSubsetSum)
+	if !SubsetSum(set, len(set)-1, 12) {
+		t.Error("calculation is wrong")
 	}
-
-	isSubsetSum = SubsetSum(set, len(set)-1, 13)
-	if isSubsetSum != false {
-		t.Errorf("[func SubsetSum(set []int, n, sum int) bool] -> %t != false", isSubsetSum)
+	if SubsetSum(set, len(set)-1, 13) {
+		t.Error("calculation is wrong")
 	}
 }
 
