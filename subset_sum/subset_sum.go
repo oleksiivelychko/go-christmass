@@ -1,7 +1,7 @@
 package subset_sum
 
 /*
-SubsetSum - NP-complete task (doesn't exist efficient solution).
+SubsetSum - NP-complete task, does not exist efficient solution.
 */
 func SubsetSum(set []int, n, sum int) bool {
 	if sum == 0 {
