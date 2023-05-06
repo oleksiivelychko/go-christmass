@@ -1,4 +1,4 @@
-# computer-science
+# go-computer-science
 
 ### Explanation of complex algorithms by dint of the illustrated schemas.
 

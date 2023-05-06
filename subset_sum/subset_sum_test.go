@@ -12,6 +12,7 @@ import (
 
 func TestSubsetSum(t *testing.T) {
 	set := []int{3, 4, 5, 2}
+
 	if !SubsetSum(set, len(set)-1, 9) {
 		t.Error("calculation is wrong")
 	}
