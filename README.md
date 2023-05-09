@@ -7,3 +7,5 @@
 📌 [Insertion sort](insertion_sort/insertion_sort.pdf)
 
 📌 [Subset sum](subset_sum/subset_sum.pdf)
+
+📌 [Quick sort](quick_sort/quick_sort.pdf)
