@@ -9,3 +9,5 @@
 📌 [Subset sum](subset_sum/subset_sum.pdf)
 
 📌 [Quick sort](quick_sort/quick_sort.pdf)
+
+📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)
