@@ -12,4 +12,6 @@
 
 📌 [Subset sum](subset_sum/subset_sum.pdf)
 
+📌 [Tree_traversal](tree_traversal/tree_traversal.pdf)
+
 📌 [Quick sort](quick_sort/quick_sort.pdf)
