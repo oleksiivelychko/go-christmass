@@ -2,6 +2,8 @@
 
 ### Explanation of complex algorithms by dint of the illustrated schemas.
 
+📌 [Binary search](binary_search/binary_search.pdf)
+
 📌 [Bubble sort](bubble_sort/bubble_sort.pdf)
 
 📌 [Breadth-first search](breadth_first_search/breadth_first_search.pdf)
