@@ -8,7 +8,9 @@
 
 📌 [Breadth-first search](breadth_first_search/breadth_first_search.pdf)
 
-📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)
+📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)\
+
+📌 [Factorial](factorial/factorial.pdf)
 
 📌 [Insertion sort](insertion_sort/insertion_sort.pdf)
 
