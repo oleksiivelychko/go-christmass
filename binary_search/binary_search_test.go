@@ -8,6 +8,7 @@ import (
 
 var arrInt = [10]int{1, 3, 5, 7, 9, 11, 13, 15, 17, 19}
 var arrFloat = [10]float64{1, 1.5, 3, 3.5, 5, 5.5, 7, 7.5, 9, 9.5}
+var arrString = [10]string{"1", "12", "a", "abc", "f", "h", "o", "s", "u", "x"}
 
 func TestBinarySearch_Int(t *testing.T) {
 	found, index := BinarySearch(arrInt[:], 5)
@@ -84,5 +85,18 @@ func TestBinarySearch_BuiltinFloat(t *testing.T) {
 func BenchmarkBinarySearch_BuiltinFloat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		sort.SearchFloat64s(arrFloat[:], rand.Float64())
+	}
+}
+
+func TestBinarySearch_BuiltinString(t *testing.T) {
+	index := sort.SearchStrings(arrString[:], "abc")
+	if index != 3 {
+		t.Errorf("index %d is wrong", index)
+	}
+}
+
+func BenchmarkBinarySearch_BuiltinString(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		sort.SearchStrings(arrString[:], "abc")
 	}
 }
