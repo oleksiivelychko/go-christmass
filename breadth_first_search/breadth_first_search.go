@@ -1,7 +1,5 @@
 package breadth_first_search
 
-import "github.com/oleksiivelychko/go-code-helpers/array"
-
 /*
 BreadthFirstSearch (BFS)
 An algorithm for searching a tree data structure for a node that satisfies a given property.
@@ -22,9 +20,18 @@ func BreadthFirstSearch(graph map[string][]string, target, source string) string
 
 	for len(dequeue) > 0 {
 		item := dequeue[0]
-		dequeue = array.Pop(dequeue, 0)
+		// pop the first element from array
+		dequeue = append(dequeue[:0], dequeue[1:]...)
 
-		if array.In(searched, item) {
+		// check element in array
+		if func(slice []string, needle string) bool {
+			for _, i := range slice {
+				if i == needle {
+					return true
+				}
+			}
+			return false
+		}(searched, item) {
 			continue
 		}
 

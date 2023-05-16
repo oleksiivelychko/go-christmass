@@ -1,8 +1,6 @@
 package breadth_first_search
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 V(you) 				-> V(rabbit)
