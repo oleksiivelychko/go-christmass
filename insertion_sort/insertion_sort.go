@@ -1,9 +1,6 @@
 package insertion_sort
 
-import (
-	"github.com/oleksiivelychko/go-code-helpers/array"
-	"github.com/oleksiivelychko/go-code-helpers/intertype"
-)
+import "github.com/oleksiivelychko/go-code-helpers/intertype"
 
 /*
 InsertionSort O(n^2)
@@ -19,7 +16,8 @@ func InsertionSort[T intertype.INumber](slice []T) []T {
 	for i := 0; i < length; i++ {
 		smallestIndex := findSmallestIndex(slice)
 		newSlice[i] = slice[smallestIndex]
-		slice = array.Pop(slice, smallestIndex)
+		// pop element from array by index
+		slice = append(slice[:smallestIndex], slice[smallestIndex+1:]...)
 	}
 
 	return newSlice
