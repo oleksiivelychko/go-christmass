@@ -1,9 +1,6 @@
 package dijkstra_search
 
-import (
-	"github.com/oleksiivelychko/go-code-helpers/array"
-	"math"
-)
+import "math"
 
 /*
 DijkstraSearch
@@ -49,7 +46,15 @@ func findLowestCostNode(costs map[string]float64, processed []string) string {
 
 	for node := range costs {
 		cost := costs[node]
-		found := array.In(processed, node)
+
+		found := func(slice []string, needle string) bool {
+			for _, item := range slice {
+				if item == needle {
+					return true
+				}
+			}
+			return false
+		}(processed, node)
 
 		if cost < lowestCost && !found {
 			lowestCost = cost
