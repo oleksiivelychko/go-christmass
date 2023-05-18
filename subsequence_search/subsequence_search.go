@@ -1,25 +1,16 @@
 package subsequence_search
 
-import (
-	"github.com/oleksiivelychko/go-code-helpers/intertype"
-	"math"
-)
-
-func makeMatrix[T intertype.IInt](rows T, cols T) [][]T {
-	cells := make([][]T, rows)
-	for i := range cells {
-		cells[i] = make([]T, cols)
-	}
-
-	return cells
-}
+import "math"
 
 /*
 SubsequenceSearch O(len(Word1)*len(Word2))
 Dynamic programming is a way to solve complex tasks by breaking them down into simpler subtasks.
 */
 func SubsequenceSearch(word1, word2 string) int {
-	matrix := makeMatrix(len(word1), len(word2))
+	matrix := make([][]int, len(word1))
+	for i := range matrix {
+		matrix[i] = make([]int, len(word2))
+	}
 
 	for i := 0; i < len(word1); i++ {
 		for j := 0; j < len(word2); j++ {
