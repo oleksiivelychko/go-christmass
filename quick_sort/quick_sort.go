@@ -1,7 +1,5 @@
 package sort
 
-import "github.com/oleksiivelychko/go-code-helpers/intertype"
-
 /*
 QuickSort
 
@@ -12,21 +10,21 @@ Worst case (pivot is the first) is O(n) * O(n) = O(n^2)
 2. Compare items - all items less than pivot value move before it, all items greater than pivot move after it.
 3. Repeat steps 1,2 towards arrays - left and right between pivot.
 */
-func QuickSort[T intertype.INumber](slice []T) []T {
+func QuickSort(slice []int) []int {
 	if len(slice) <= 1 {
 		return slice
 	}
 
 	pivot := slice[0]
 
-	var head []T
+	var head []int
 	for _, num := range slice[1:] {
 		if num <= pivot {
 			head = append(head, num)
 		}
 	}
 
-	var tail []T
+	var tail []int
 	for _, num := range slice[1:] {
 		if num > pivot {
 			tail = append(tail, num)

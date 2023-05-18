@@ -1,7 +1,5 @@
 package insertion_sort
 
-import "github.com/oleksiivelychko/go-code-helpers/intertype"
-
 /*
 InsertionSort O(n^2)
 
@@ -9,8 +7,8 @@ InsertionSort O(n^2)
 2. Put the smallest element into new array.
 3. Remove the smallest element from array.
 */
-func InsertionSort[T intertype.INumber](slice []T) []T {
-	var newSlice = make([]T, len(slice))
+func InsertionSort(slice []int) []int {
+	var newSlice = make([]int, len(slice))
 
 	var length = len(slice)
 	for i := 0; i < length; i++ {
@@ -23,7 +21,7 @@ func InsertionSort[T intertype.INumber](slice []T) []T {
 	return newSlice
 }
 
-func findSmallestIndex[T intertype.INumber](slice []T) int {
+func findSmallestIndex(slice []int) int {
 	var smallestIndex = 0
 	var smallest = slice[0]
 

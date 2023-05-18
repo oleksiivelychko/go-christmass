@@ -1,8 +1,6 @@
 package factorial
 
-import "github.com/oleksiivelychko/go-code-helpers/intertype"
-
-func Factorial[T intertype.INumber](x T) T {
+func Factorial(x int) int {
 	if x == 1 {
 		return 1
 	}
