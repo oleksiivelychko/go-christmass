@@ -1,6 +1,16 @@
 package binary_search
 
-import "github.com/oleksiivelychko/go-code-helpers/intertype"
+type IInt interface {
+	uint | uint8 | uint16 | uint32 | uint64 | int | int8 | int16 | int32 | int64
+}
+
+type IFloat interface {
+	float32 | float64
+}
+
+type INumber interface {
+	IInt | IFloat
+}
 
 /*
 BinarySearch O(log n)
@@ -13,7 +23,7 @@ Array must be sorted before and contains numbers only.
 3. If middle item greater than desired value then search is going to be on the right side of array.
 4. Repeat steps until target will not be found.
 */
-func BinarySearch[T intertype.INumber](slice []T, target T) (bool, int) {
+func BinarySearch[T INumber](slice []T, target T) (bool, int) {
 	var bottom = 0
 	var top = len(slice) - 1
 
@@ -32,7 +42,7 @@ func BinarySearch[T intertype.INumber](slice []T, target T) (bool, int) {
 	return false, 0
 }
 
-func BinarySearchRecursion[T intertype.INumber](slice []T, target T) bool {
+func BinarySearchRecursion[T INumber](slice []T, target T) bool {
 	var bottom = 0
 	var top = len(slice) - 1
 	var middle = -1
