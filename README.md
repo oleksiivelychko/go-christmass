@@ -1,6 +1,6 @@
 # go-computer-science
 
-### Explanation of algorithms by dint of the illustrated schemas.
+### Explanation of algorithms by dint of illustrated schemas.
 
 📌 [Binary search](binary_search/binary_search.pdf)
 
@@ -8,7 +8,7 @@
 
 📌 [Bubble sort](bubble_sort/bubble_sort.pdf)
 
-📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)\
+📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)
 
 📌 [Factorial](factorial/factorial.pdf)
 
