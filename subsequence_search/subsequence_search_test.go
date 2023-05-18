@@ -1,8 +1,6 @@
 package subsequence_search
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 | m | i | s | h |			| f | o | s | h |

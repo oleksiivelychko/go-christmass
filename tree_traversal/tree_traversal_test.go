@@ -1,8 +1,6 @@
 package tree_traversal
 
-import (
-	"testing"
-)
+import "testing"
 
 func makeTree() *Node {
 	var tree = &Node{Value: 0, Left: nil, Right: nil}
