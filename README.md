@@ -1,8 +1,6 @@
 # go-computer-science
 
-### Explanation of algorithms by dint of illustrated schemas.
-
-📌 [Binary search](binary_search/binary_search.pdf)
+📌 [Binary search](binary_search)
 
 📌 [Breadth-first search](breadth_first_search/breadth_first_search.pdf)
 
