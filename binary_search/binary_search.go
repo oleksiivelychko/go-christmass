@@ -16,12 +16,12 @@ type INumber interface {
 BinarySearch O(log n)
 log2(8)=3 attempts are required to find value (operation opposite to exponentiation).
 
-Array must be sorted before and contains numbers only.
+Dataset must be sorted and contains numbers only.
 
-1. Pick middle item.
-2. If middle item less than desired value then search is going to be on the left side of array.
-3. If middle item greater than desired value then search is going to be on the right side of array.
-4. Repeat steps until target will not be found.
+1. pick the middle item and compare it to search value
+2. if picked value less than search one then keep searching on the right side of dataset
+3. if picked value greater than search one then keep searching on the left side of dataset
+4. repeat steps until search value will not be found or dataset is not empty
 */
 func BinarySearch[T INumber](slice []T, target T) (bool, int) {
 	var bottom = 0
