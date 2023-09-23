@@ -4,7 +4,7 @@
 
 📌 [Breadth-first search](breadth_first_search)
 
-📌 [Bubble sort](bubble_sort/bubble_sort.pdf)
+📌 [Bubble sort](bubble_sort)
 
 📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)
 
@@ -25,4 +25,3 @@
 ---
 ※ References:
 - [Grokking Algorithms](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230)
-- [Breadth-first_search](https://en.wikipedia.org/wiki/Breadth-first_search)
