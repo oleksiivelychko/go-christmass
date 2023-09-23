@@ -2,7 +2,7 @@
 
 📌 [Binary search](binary_search)
 
-📌 [Breadth-first search](breadth_first_search/breadth_first_search.pdf)
+📌 [Breadth-first search](breadth_first_search)
 
 📌 [Bubble sort](bubble_sort/bubble_sort.pdf)
 
@@ -21,3 +21,8 @@
 📌 [Subset sum](subset_sum/subset_sum.pdf)
 
 📌 [Tree_traversal](tree_traversal/tree_traversal.pdf)
+
+---
+※ References:
+- [Grokking Algorithms](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230)
+- [Breadth-first_search](https://en.wikipedia.org/wiki/Breadth-first_search)
