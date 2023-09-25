@@ -6,7 +6,7 @@
 
 📌 [Bubble sort](bubble_sort)
 
-📌 [Dijkstra search](dijkstra_search/dijkstra_search.pdf)
+📌 [Dijkstra search](dijkstra_search)
 
 📌 [Factorial](factorial/factorial.pdf)
 
