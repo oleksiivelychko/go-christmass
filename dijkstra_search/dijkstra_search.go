@@ -4,63 +4,59 @@ import "math"
 
 /*
 DijkstraSearch
+For weighted graph only, where weighted graph is a graph in which each edge has assigned the weight (value)
 
-Only for weighted graphs.
-Weighted graph - a graph in which each edge has assigned some weight(value) e.g. number.
-For negative weights must be used Bellman–Ford algorithm.
-
-1. Each vertex has minimal-known distance (costs) to V(start).
-2. V(start) assigned as 0, V(finish) assigned as infinity.
-3. All vertices are marked as non-processed.
-4. Iterate over graph and try to reduce cost to make it to V(finish).
-5. Get one of non-processed vertex which has minimal cost.
-7. Vertices from this V(E) named 'neighbors'.
-8. For each neighbor considers new distance (nodeCost+neighborCost)
-9. If its value less - than replace with new distance.
+- each vertex has minimal-known distance (costs) to V(start)
+- V(start) is assigned as 0, V(finish) is assigned as infinity
 */
-func DijkstraSearch(graph map[string]map[string]float64, costs map[string]float64, parents map[string]string) float64 {
-	var processed []string
+func DijkstraSearch(graph map[string]map[string]float64, costs map[string]float64) float64 {
+	// all vertices are marked as unprocessed by default
+	var processedVertices []string
 
-	node := findLowestCostNode(costs, processed)
-	for node != "" {
-		cost := costs[node]
-		neighbors := graph[node]
-		for neighborNode := range neighbors {
-			newCost := cost + neighbors[neighborNode]
-			if costs[neighborNode] > newCost {
-				costs[neighborNode] = newCost
-				parents[neighborNode] = neighborNode
+	// get first vertex with minimal cost
+	vertex := findLowestCostVertex(costs, processedVertices)
+	// iterate over graph and try to reduce cost to achieve V(finish)
+	for vertex != "" {
+		neighbors := graph[vertex]
+		currentVertexCost := costs[vertex]
+
+		// vertices from current vertex V(E) are called neighbors
+		for neighbor := range neighbors {
+			// for each neighbor has being calculated new distance (vertexCost+neighborCost)
+			newCost := currentVertexCost + neighbors[neighbor]
+
+			// if new cost is lowest then existing one than replace it
+			if costs[neighbor] > newCost {
+				costs[neighbor] = newCost
 			}
 		}
 
-		processed = append(processed, node)
-		node = findLowestCostNode(costs, processed)
+		processedVertices = append(processedVertices, vertex)
+		// get one of unprocessed vertices which has minimal cost
+		vertex = findLowestCostVertex(costs, processedVertices)
 	}
 
 	return costs["finish"]
 }
 
-func findLowestCostNode(costs map[string]float64, processed []string) string {
+func findLowestCostVertex(costs map[string]float64, processedVertices []string) string {
 	var lowestCost = math.Inf(1)
-	var lowestCostNode = ""
+	var lowestCostVertex = ""
 
-	for node := range costs {
-		cost := costs[node]
-
-		found := func(slice []string, needle string) bool {
+	for vertex, cost := range costs {
+		// detect the lowest cost from unprocessed vertices
+		if cost < lowestCost && !func(slice []string, needle string) bool {
 			for _, item := range slice {
 				if item == needle {
 					return true
 				}
 			}
 			return false
-		}(processed, node)
-
-		if cost < lowestCost && !found {
+		}(processedVertices, vertex) {
 			lowestCost = cost
-			lowestCostNode = node
+			lowestCostVertex = vertex
 		}
 	}
 
-	return lowestCostNode
+	return lowestCostVertex
 }
