@@ -6,7 +6,6 @@ import (
 )
 
 /*
-*
 V(start)	-> V(a) 		= E(6)
 V(start) 	-> V(b) 		= E(2)
 V(a) 		-> V(finish)	= E(1)
@@ -34,14 +33,8 @@ var costs = map[string]float64{
 	"finish": math.Inf(1),
 }
 
-var parents = map[string]string{
-	"a":      "start",
-	"b":      "start",
-	"finish": "",
-}
-
 func TestDijkstraSearch(t *testing.T) {
-	cost := DijkstraSearch(weightedGraph, costs, parents)
+	cost := DijkstraSearch(weightedGraph, costs)
 	if cost != 6 {
 		t.Errorf("lowest cost %f is wrong", cost)
 	}
@@ -49,6 +42,6 @@ func TestDijkstraSearch(t *testing.T) {
 
 func BenchmarkDijkstraSearch(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		DijkstraSearch(weightedGraph, costs, parents)
+		DijkstraSearch(weightedGraph, costs)
 	}
 }
