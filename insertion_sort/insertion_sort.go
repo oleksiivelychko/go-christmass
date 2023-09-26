@@ -2,33 +2,30 @@ package insertion_sort
 
 /*
 InsertionSort O(n^2)
-
-1. Find the smallest element in array.
-2. Put the smallest element into new array.
-3. Remove the smallest element from array.
 */
-func InsertionSort(slice []int) []int {
-	var newSlice = make([]int, len(slice))
+func InsertionSort(dataset []int) []int {
+	var sortedDataset = make([]int, len(dataset))
 
-	var length = len(slice)
-	for i := 0; i < length; i++ {
-		smallestIndex := findSmallestIndex(slice)
-		newSlice[i] = slice[smallestIndex]
-		// pop element from array by index
-		slice = append(slice[:smallestIndex], slice[smallestIndex+1:]...)
+	for i := 0; i < len(dataset); i++ {
+		// get smallest item in dataset
+		smallestIndex := findSmallest(dataset)
+		// put smallest item into dataset
+		sortedDataset[i] = dataset[smallestIndex]
+		// pop smallest item from dataset by index
+		dataset = append(dataset[:smallestIndex], dataset[smallestIndex+1:]...)
 	}
 
-	return newSlice
+	return sortedDataset
 }
 
-func findSmallestIndex(slice []int) int {
+func findSmallest(dataset []int) int {
 	var smallestIndex = 0
-	var smallest = slice[0]
+	var smallest = dataset[0]
 
-	for i := 1; i <= len(slice)-1; i++ {
-		if slice[i] < smallest {
+	for i := 1; i <= len(dataset)-1; i++ {
+		if dataset[i] < smallest {
 			smallestIndex = i
-			smallest = slice[i]
+			smallest = dataset[i]
 		}
 	}
 
