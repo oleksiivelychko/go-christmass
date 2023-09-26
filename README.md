@@ -10,7 +10,7 @@
 
 📌 [Factorial](factorial)
 
-📌 [Insertion sort](insertion_sort/insertion_sort.pdf)
+📌 [Insertion sort](insertion_sort)
 
 📌 [Quick sort](quick_sort/quick_sort.pdf)
 
