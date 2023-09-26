@@ -8,7 +8,7 @@
 
 📌 [Dijkstra search](dijkstra_search)
 
-📌 [Factorial](factorial/factorial.pdf)
+📌 [Factorial](factorial)
 
 📌 [Insertion sort](insertion_sort/insertion_sort.pdf)
 
