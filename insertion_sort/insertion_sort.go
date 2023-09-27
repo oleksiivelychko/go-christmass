@@ -1,9 +1,9 @@
 package insertion_sort
 
 /*
-InsertionSort O(n^2)
+insertionSort O(n^2)
 */
-func InsertionSort(dataset []int) []int {
+func insertionSort(dataset []int) []int {
 	var sortedDataset = make([]int, len(dataset))
 
 	for i := 0; i < len(dataset); i++ {

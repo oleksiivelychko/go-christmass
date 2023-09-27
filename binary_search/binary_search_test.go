@@ -11,7 +11,7 @@ var arrFloat = [10]float64{1, 1.5, 3, 3.5, 5, 5.5, 7, 7.5, 9, 9.5}
 var arrString = [10]string{"1", "12", "a", "abc", "f", "h", "o", "s", "u", "x"}
 
 func TestBinarySearch_Int(t *testing.T) {
-	found, index := BinarySearch(arrInt[:], 5)
+	found, index := binarySearch(arrInt[:], 5)
 	if !found || index != 2 {
 		t.Errorf("unable to find item, index is %d", index)
 	}
@@ -19,12 +19,12 @@ func TestBinarySearch_Int(t *testing.T) {
 
 func BenchmarkBinarySearch_Int(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		BinarySearch(arrInt[:], rand.Intn(7))
+		binarySearch(arrInt[:], rand.Intn(7))
 	}
 }
 
 func TestBinarySearch_Float(t *testing.T) {
-	found, index := BinarySearch(arrFloat[:], 7.5)
+	found, index := binarySearch(arrFloat[:], 7.5)
 	if !found || index != 7 {
 		t.Errorf("unable to find item, index is %d", index)
 	}
@@ -32,12 +32,12 @@ func TestBinarySearch_Float(t *testing.T) {
 
 func BenchmarkBinarySearch_Float(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		BinarySearch(arrFloat[:], rand.Float64())
+		binarySearch(arrFloat[:], rand.Float64())
 	}
 }
 
 func TestBinarySearch_RecursionInt(t *testing.T) {
-	found := BinarySearchRecursion(arrInt[:], 5)
+	found := binarySearchRecursion(arrInt[:], 5)
 	if !found {
 		t.Error("unable to find item")
 	}
@@ -45,12 +45,12 @@ func TestBinarySearch_RecursionInt(t *testing.T) {
 
 func BenchmarkBinarySearch_RecursionInt(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		BinarySearchRecursion(arrInt[:], rand.Intn(7))
+		binarySearchRecursion(arrInt[:], rand.Intn(7))
 	}
 }
 
 func TestBinarySearch_RecursionFloat(t *testing.T) {
-	found := BinarySearchRecursion(arrFloat[:], 7.5)
+	found := binarySearchRecursion(arrFloat[:], 7.5)
 	if !found {
 		t.Error("unable to find item")
 	}
@@ -58,7 +58,7 @@ func TestBinarySearch_RecursionFloat(t *testing.T) {
 
 func BenchmarkBinarySearch_RecursionFloat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		BinarySearchRecursion(arrFloat[:], rand.Float64())
+		binarySearchRecursion(arrFloat[:], rand.Float64())
 	}
 }
 

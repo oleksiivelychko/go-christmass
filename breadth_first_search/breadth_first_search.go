@@ -1,13 +1,13 @@
 package breadth_first_search
 
 /*
-BreadthFirstSearch (BFS)
+breadthFirstSearch (BFS)
 Algorithm for searching a tree data structure for a node that satisfies a given property.
 
 O(V+E), V is number of vertices, E is number of edges.
 For unweighted graphs only.
 */
-func BreadthFirstSearch(graph map[string][]string, searchValue, firstNode string) string {
+func breadthFirstSearch(graph map[string][]string, searchValue, firstNode string) string {
 	var deque []string
 	var processedNodes []string
 

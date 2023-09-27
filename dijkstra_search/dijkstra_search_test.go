@@ -34,7 +34,7 @@ var costs = map[string]float64{
 }
 
 func TestDijkstraSearch(t *testing.T) {
-	cost := DijkstraSearch(weightedGraph, costs)
+	cost := dijkstraSearch(weightedGraph, costs)
 	if cost != 6 {
 		t.Errorf("lowest cost %f is wrong", cost)
 	}
@@ -42,6 +42,6 @@ func TestDijkstraSearch(t *testing.T) {
 
 func BenchmarkDijkstraSearch(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		DijkstraSearch(weightedGraph, costs)
+		dijkstraSearch(weightedGraph, costs)
 	}
 }

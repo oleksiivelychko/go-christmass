@@ -3,13 +3,13 @@ package dijkstra_search
 import "math"
 
 /*
-DijkstraSearch
+dijkstraSearch
 For weighted graph only, where weighted graph is a graph in which each edge has assigned the weight (value)
 
 - each vertex has minimal-known distance (costs) to V(start)
 - V(start) is assigned as 0, V(finish) is assigned as infinity
 */
-func DijkstraSearch(graph map[string]map[string]float64, costs map[string]float64) float64 {
+func dijkstraSearch(graph map[string]map[string]float64, costs map[string]float64) float64 {
 	// all vertices are marked as unprocessed by default
 	var processedVertices []string
 

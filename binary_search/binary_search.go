@@ -1,23 +1,23 @@
 package binary_search
 
-type IInt interface {
+type iInt interface {
 	uint | uint8 | uint16 | uint32 | uint64 | int | int8 | int16 | int32 | int64
 }
 
-type IFloat interface {
+type iFloat interface {
 	float32 | float64
 }
 
-type INumber interface {
-	IInt | IFloat
+type iNumber interface {
+	iInt | iFloat
 }
 
 /*
-BinarySearch O(log n)
+binarySearch O(log n)
 log2(8)=3 attempts are required to find value (operation opposite to exponentiation).
 Dataset must be sorted and contains numbers only.
 */
-func BinarySearch[T INumber](dataset []T, searchValue T) (bool, int) {
+func binarySearch[T iNumber](dataset []T, searchValue T) (bool, int) {
 	var bottom = 0
 	var top = len(dataset) - 1
 
@@ -40,7 +40,7 @@ func BinarySearch[T INumber](dataset []T, searchValue T) (bool, int) {
 	return false, 0
 }
 
-func BinarySearchRecursion[T INumber](dataset []T, searchValue T) bool {
+func binarySearchRecursion[T iNumber](dataset []T, searchValue T) bool {
 	var bottom = 0
 	var top = len(dataset) - 1
 	var middle = -1
@@ -57,7 +57,7 @@ func BinarySearchRecursion[T INumber](dataset []T, searchValue T) bool {
 			bottom = middle + 1
 		}
 
-		found = BinarySearchRecursion(dataset[bottom:top+1], searchValue)
+		found = binarySearchRecursion(dataset[bottom:top+1], searchValue)
 	}
 
 	return found

@@ -3,8 +3,8 @@ package factorial
 import "testing"
 
 func TestFactorial(t *testing.T) {
-	factorial := Factorial(3)
-	if factorial != 6 {
-		t.Errorf("value %d is wrong", factorial)
+	f := factorial(3)
+	if f != 6 {
+		t.Errorf("value %d is wrong", f)
 	}
 }

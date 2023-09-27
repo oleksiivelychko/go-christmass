@@ -27,7 +27,7 @@ var unweightedGraph = map[string][]string{
 }
 
 func TestBreadthFirstSearch(t *testing.T) {
-	node := BreadthFirstSearch(unweightedGraph, "owl", "robin")
+	node := breadthFirstSearch(unweightedGraph, "owl", "robin")
 	if node == "" {
 		t.Error("unable to find node")
 	}
@@ -35,6 +35,6 @@ func TestBreadthFirstSearch(t *testing.T) {
 
 func BenchmarkBreadthFirstSearch(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		BreadthFirstSearch(unweightedGraph, "owl", "robin")
+		breadthFirstSearch(unweightedGraph, "owl", "robin")
 	}
 }
