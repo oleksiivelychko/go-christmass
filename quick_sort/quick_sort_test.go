@@ -10,15 +10,15 @@ var arrInt = [10]int{11, -13, 15, 17, 19, 1, 3, 5, -7, 9}
 var arrString = [10]string{"f", "h", "a", "abc", "x", "o", "1", "u", "12", "s"}
 
 func TestQuickSort(t *testing.T) {
-	var sorted = QuickSort(arrInt[:])
+	var sorted = quickSort(arrInt[:])
 	if !reflect.DeepEqual([]int{-13, -7, 1, 3, 5, 9, 11, 15, 17, 19}, sorted) {
-		t.Error("arrays are equal")
+		t.Error("dataset was not sorted")
 	}
 }
 
 func BenchmarkQuickSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		QuickSort(arrInt[:])
+		quickSort(arrInt[:])
 	}
 }
 
@@ -26,7 +26,7 @@ func TestQuickSort_BuiltinInt(t *testing.T) {
 	sort.Ints(arrInt[:])
 
 	if !sort.IntsAreSorted(arrInt[:]) {
-		t.Error("array is not sorted")
+		t.Error("dataset was not sorted")
 	}
 
 	t.Log(arrInt)
