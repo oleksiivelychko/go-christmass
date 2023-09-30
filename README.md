@@ -14,7 +14,7 @@
 
 📌 [Quick sort](quick_sort)
 
-📌 [Reverse array](reverse_array/reverse_array.pdf)
+📌 [Reversed array](reversed_array)
 
 📌 [Subsequence search](subsequence_search/subsequence_search.pdf)
 
