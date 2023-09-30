@@ -1,39 +1,37 @@
 package sort
 
 /*
-QuickSort
-
-Best case (pivot is the middle) is O(n) * O(log n) = O(n log n)
+quickSort
 Worst case (pivot is the first) is O(n) * O(n) = O(n^2)
-
-1. Select item as pivot.
-2. Compare items - all items less than pivot value move before it, all items greater than pivot move after it.
-3. Repeat steps 1,2 towards arrays - left and right between pivot.
+Best case (pivot is the middle) is O(n) * O(log n) = O(n log n)
 */
-func QuickSort(slice []int) []int {
-	if len(slice) <= 1 {
-		return slice
+func quickSort(dataset []int) []int {
+	if len(dataset) == 0 {
+		return dataset
 	}
 
-	pivot := slice[0]
+	pivot := dataset[0]
 
 	var head []int
-	for _, num := range slice[1:] {
-		if num <= pivot {
-			head = append(head, num)
+	for _, item := range dataset[1:] {
+		// items that are smaller than pivot need to be moved before it
+		if item <= pivot {
+			head = append(head, item)
 		}
 	}
 
 	var tail []int
-	for _, num := range slice[1:] {
-		if num > pivot {
-			tail = append(tail, num)
+	for _, item := range dataset[1:] {
+		// items that are greater than pivot need to be moved after it
+		if item > pivot {
+			tail = append(tail, item)
 		}
 	}
 
-	head = QuickSort(head)
-	tail = QuickSort(tail)
+	head = quickSort(head)
+	tail = quickSort(tail)
 
+	// pivot equals to the smallest value in dataset after the first recursive invoking
 	head = append(head, pivot)
 	head = append(head, tail...)
 
