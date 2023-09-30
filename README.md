@@ -12,7 +12,7 @@
 
 📌 [Insertion sort](insertion_sort)
 
-📌 [Quick sort](quick_sort/quick_sort.pdf)
+📌 [Quick sort](quick_sort)
 
 📌 [Reverse array](reverse_array/reverse_array.pdf)
 
