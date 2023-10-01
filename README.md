@@ -18,10 +18,10 @@
 
 📌 [Subsequence search](subsequence_search)
 
-📌 [Subset sum](subset_sum/subset_sum.pdf)
+📌 [Subset sum](subset_sum)
 
 📌 [Tree_traversal](tree_traversal/tree_traversal.pdf)
 
 ---
 ※ References:
-- [Grokking Algorithms](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230)
+- [Grokking Algorithms](https://www.oreilly.com/library/view/grokking-algorithms/9781617292231/)

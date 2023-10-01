@@ -1,9 +1,9 @@
 package subset_sum
 
 /*
-SubsetSum - NP-complete task, does not exist efficient solution.
+subsetSum - NP-complete task, does not exist efficient solution.
 */
-func SubsetSum(set []int, n, sum int) bool {
+func subsetSum(set []int, n, sum int) bool {
 	if sum == 0 {
 		return true
 	}
@@ -12,8 +12,8 @@ func SubsetSum(set []int, n, sum int) bool {
 		return false
 	}
 
-	include := SubsetSum(set, n-1, sum-set[n])
-	exclude := SubsetSum(set, n-1, sum)
+	include := subsetSum(set, n-1, sum-set[n])
+	exclude := subsetSum(set, n-1, sum)
 
 	return include || exclude
 }
