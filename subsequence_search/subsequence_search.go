@@ -3,10 +3,10 @@ package subsequence_search
 import "math"
 
 /*
-SubsequenceSearch O(len(Word1)*len(Word2))
+subsequenceSearch O(len(Word1)*len(Word2))
 Dynamic programming is a way to solve complex tasks by breaking them down into simpler subtasks.
 */
-func SubsequenceSearch(word1, word2 string) int {
+func subsequenceSearch(word1, word2 string) int {
 	matrix := make([][]int, len(word1))
 	for i := range matrix {
 		matrix[i] = make([]int, len(word2))

@@ -15,12 +15,12 @@ h | 0 | 1 | 2 | 3 |       h | 0 | 0 | 1 | 2 |
 __|___|___|___|___|       __|___|___|___|___|
 */
 func TestSubsequencesSearch(t *testing.T) {
-	count := SubsequenceSearch("fish", "mish")
+	count := subsequenceSearch("fish", "mish")
 	if count != 3 {
 		t.Errorf("count %d mismatch", count)
 	}
 
-	count = SubsequenceSearch("fish", "fosh")
+	count = subsequenceSearch("fish", "fosh")
 	if count != 2 {
 		t.Errorf("count %d mismatch", count)
 	}
@@ -28,6 +28,6 @@ func TestSubsequencesSearch(t *testing.T) {
 
 func BenchmarkSubsequencesSearch(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		SubsequenceSearch("fish", "aosh")
+		subsequenceSearch("fish", "aosh")
 	}
 }
