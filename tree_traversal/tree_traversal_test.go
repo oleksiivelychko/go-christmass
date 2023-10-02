@@ -2,20 +2,20 @@ package tree_traversal
 
 import "testing"
 
-func makeTree() *Node {
-	var tree = &Node{Value: 0, Left: nil, Right: nil}
-	tree.Left = &Node{Value: 1, Left: nil, Right: nil}
-	tree.Left.Left = &Node{Value: 2, Left: nil, Right: nil}
-	tree.Left.Left.Left = &Node{Value: 3, Left: nil, Right: nil}
-	tree.Left.Left.Right = &Node{Value: 4, Left: nil, Right: nil}
-	tree.Left.Right = &Node{Value: 5, Left: nil, Right: nil}
-	tree.Right = &Node{Value: 6, Left: nil, Right: nil}
+func makeTree() *node {
+	var tree = &node{value: 0, left: nil, right: nil}
+	tree.left = &node{value: 1, left: nil, right: nil}
+	tree.left.left = &node{value: 2, left: nil, right: nil}
+	tree.left.left.left = &node{value: 3, left: nil, right: nil}
+	tree.left.left.right = &node{value: 4, left: nil, right: nil}
+	tree.left.right = &node{value: 5, left: nil, right: nil}
+	tree.right = &node{value: 6, left: nil, right: nil}
 
 	return tree
 }
 
 func TestTreeTraversal(t *testing.T) {
-	sum := TreeTraversal(makeTree())
+	sum := treeTraversal(makeTree())
 	if sum != 21 {
 		t.Errorf("sum %d is wrong", sum)
 	}
@@ -24,6 +24,6 @@ func TestTreeTraversal(t *testing.T) {
 func BenchmarkTreeTraversal(b *testing.B) {
 	tree := makeTree()
 	for i := 0; i < b.N; i++ {
-		TreeTraversal(tree)
+		treeTraversal(tree)
 	}
 }

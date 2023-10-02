@@ -1,20 +1,20 @@
 package tree_traversal
 
-type Node struct {
-	Value int
-	Left  *Node
-	Right *Node
+type node struct {
+	value int
+	left  *node
+	right *node
 }
 
-func TreeTraversal(tree *Node) int {
-	var value = tree.Value
+func treeTraversal(tree *node) int {
+	var value = tree.value
 
-	if tree.Left != nil {
-		value += TreeTraversal(tree.Left)
+	if tree.left != nil {
+		value += treeTraversal(tree.left)
 	}
 
-	if tree.Right != nil {
-		value += TreeTraversal(tree.Right)
+	if tree.right != nil {
+		value += treeTraversal(tree.right)
 	}
 
 	return value
