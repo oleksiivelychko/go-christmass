@@ -20,7 +20,7 @@
 
 📌 [Subset sum](subset_sum)
 
-📌 [Tree_traversal](tree_traversal/tree_traversal.pdf)
+📌 [Tree_traversal](tree_traversal)
 
 ---
 ※ References:
