@@ -10,6 +10,8 @@
 
 📌 [Factorial](factorial)
 
+📌 [Fibonacci](fibonacci)
+
 📌 [Insertion sort](insertion_sort)
 
 📌 [Quick sort](quick_sort)
