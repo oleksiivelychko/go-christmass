@@ -18,7 +18,7 @@
 
 📌 [Reverse array](reversearray)
 
-📌 [Subsequence search](subsequence_search)
+📌 [Subsequence search](subsequencesearch)
 
 📌 [Subset sum](subset_sum)
 
