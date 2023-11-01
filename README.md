@@ -4,7 +4,7 @@
 
 📌 [Breadth-first search](breadthfirstsearch)
 
-📌 [Bubble sort](bubble_sort)
+📌 [Bubble sort](bubblesort)
 
 📌 [Dijkstra search](dijkstra_search)
 
