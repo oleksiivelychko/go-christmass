@@ -1,4 +1,4 @@
-package dijkstra_search
+package dijkstrasearch
 
 import (
 	"math"
@@ -12,7 +12,7 @@ V(a) 		-> V(finish)	= E(1)
 V(b) 		-> V(a) 		= E(3)
 V(b) 		-> V(finish) 	= E(5)
 */
-var weightedGraph = map[string]map[string]float64{
+var graph = map[string]map[string]float64{
 	"start": {
 		"a": 6,
 		"b": 2,
@@ -34,14 +34,14 @@ var costs = map[string]float64{
 }
 
 func TestDijkstraSearch(t *testing.T) {
-	cost := dijkstraSearch(weightedGraph, costs)
+	cost := search(graph, costs)
 	if cost != 6 {
-		t.Errorf("lowest cost %f is wrong", cost)
+		t.Errorf("got incorrect cost %f", cost)
 	}
 }
 
 func BenchmarkDijkstraSearch(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		dijkstraSearch(weightedGraph, costs)
+		search(graph, costs)
 	}
 }
