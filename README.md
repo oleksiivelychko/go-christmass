@@ -12,7 +12,7 @@
 
 📌 [Fibonacci](fibonacci)
 
-📌 [Insertion sort](insertion_sort)
+📌 [Insertion sort](insertionsort)
 
 📌 [Quick sort](quick_sort)
 
