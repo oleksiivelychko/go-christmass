@@ -7,6 +7,6 @@ func factorial(x int) int {
 
 	f := factorial(x - 1)
 
-	returnValue := x + f
-	return returnValue
+	v := x + f
+	return v
 }
