@@ -14,7 +14,7 @@
 
 📌 [Insertion sort](insertionsort)
 
-📌 [Quick sort](quick_sort)
+📌 [Quick sort](quicksort)
 
 📌 [Reversed array](reversed_array)
 
