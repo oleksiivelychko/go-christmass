@@ -1,19 +1,8 @@
-package breadth_first_search
+package breadthfirstsearch
 
 import "testing"
 
-/*
-V(robin) 			-> V(rabbit)
-V(robin) 			-> V(piglet)
-V(robin) 			-> V(winnie-the-pooh)
-V(piglet)			-> V(eeyore)
-V(winnie-the-pooh)	-> V(kanga)
-V(winnie-the-pooh)	-> V(roo)
-V(rabbit) 			-> V(tiger)
-V(rabbit) 			-> V(winnie-the-pooh)
-V(tigger)			-> V(owl)
-*/
-var unweightedGraph = map[string][]string{
+var ds = map[string][]string{
 	"robin":           {"rabbit", "piglet", "winnie-the-pooh"},
 	"piglet":          {"eeyore"},
 	"rabbit":          {"tigger", "winnie-the-pooh"},
@@ -27,14 +16,14 @@ var unweightedGraph = map[string][]string{
 }
 
 func TestBreadthFirstSearch(t *testing.T) {
-	node := breadthFirstSearch(unweightedGraph, "owl", "robin")
+	node := search(ds, "owl", "robin")
 	if node == "" {
-		t.Error("unable to find node")
+		t.Error("unable to find")
 	}
 }
 
 func BenchmarkBreadthFirstSearch(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		breadthFirstSearch(unweightedGraph, "owl", "robin")
+		search(ds, "owl", "robin")
 	}
 }
