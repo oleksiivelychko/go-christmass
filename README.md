@@ -2,7 +2,7 @@
 
 📌 [Binary search](binarysearch)
 
-📌 [Breadth-first search](breadth_first_search)
+📌 [Breadth-first search](breadthfirstsearch)
 
 📌 [Bubble sort](bubble_sort)
 
