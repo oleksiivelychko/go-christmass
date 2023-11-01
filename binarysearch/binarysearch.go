@@ -12,11 +12,9 @@ type number interface {
 	integer | double
 }
 
-/*
-search O(log n)
-log2(8)=3 attempts are required to find value (operation opposite to exponentiation).
-Dataset must be sorted and contains numbers only.
-*/
+// search O(log n)
+// log2(8)=3 attempts are required to find value (operation opposite to exponentiation).
+// Dataset must be sorted and contains numbers only.
 func search[T number](ds []T, s T) (bool, int) {
 	var bottom = 0
 	var top = len(ds) - 1
