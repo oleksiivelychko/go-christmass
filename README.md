@@ -16,7 +16,7 @@
 
 📌 [Quick sort](quicksort)
 
-📌 [Reversed array](reversed_array)
+📌 [Reverse array](reversearray)
 
 📌 [Subsequence search](subsequence_search)
 
