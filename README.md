@@ -20,9 +20,9 @@
 
 📌 [Subsequence search](subsequencesearch)
 
-📌 [Subset sum](subset_sum)
+📌 [Subset sum](subsetsum)
 
-📌 [Tree_traversal](tree_traversal)
+📌 [Tree_traversal](treetraversal)
 
 ---
 ※ References:
