@@ -13,20 +13,22 @@ import (
 func TestSubsetSum(t *testing.T) {
 	ds := []int{3, 4, 5, 2}
 
+	tErr := func() { t.Error("unable to sum") }
+
 	if !subsetSum(ds, len(ds)-1, 9) {
-		t.Error("unable to calculate")
+		tErr()
 	}
 	if !subsetSum(ds, len(ds)-1, 10) {
-		t.Error("unable to calculate")
+		tErr()
 	}
 	if !subsetSum(ds, len(ds)-1, 11) {
-		t.Error("unable to calculate")
+		tErr()
 	}
 	if !subsetSum(ds, len(ds)-1, 12) {
-		t.Error("unable to calculate")
+		tErr()
 	}
 	if subsetSum(ds, len(ds)-1, 13) {
-		t.Error("unable to calculate")
+		tErr()
 	}
 }
 

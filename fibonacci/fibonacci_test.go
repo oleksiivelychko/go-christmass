@@ -5,38 +5,40 @@ import "testing"
 func TestFibonacci(t *testing.T) {
 	f := fibonacci()
 
+	tErr := func(num, expect int) { t.Errorf("[func Fibonacci() func() int] -> %d != %d", num, expect) }
+
 	for i := 0; i < 10; i++ {
 		num := f()
 
 		if i == 0 && num != 0 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 0", num)
+			tErr(num, 0)
 		}
 		if i == 1 && num != 1 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 1", num)
+			tErr(num, 1)
 		}
 		if i == 2 && num != 1 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 1", num)
+			tErr(num, 1)
 		}
 		if i == 3 && num != 2 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 2", num)
+			tErr(num, 2)
 		}
 		if i == 4 && num != 3 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 3", num)
+			tErr(num, 3)
 		}
 		if i == 5 && num != 5 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 5", num)
+			tErr(num, 5)
 		}
 		if i == 6 && num != 8 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 8", num)
+			tErr(num, 8)
 		}
 		if i == 7 && num != 13 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 13", num)
+			tErr(num, 13)
 		}
 		if i == 8 && num != 21 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 21", num)
+			tErr(num, 21)
 		}
 		if i == 9 && num != 34 {
-			t.Errorf("[func Fibonacci() func() int] -> %d != 34", num)
+			tErr(num, 34)
 		}
 	}
 }

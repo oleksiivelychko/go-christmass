@@ -13,7 +13,7 @@ var stringDS = [10]string{"1", "12", "a", "abc", "f", "h", "o", "s", "u", "x"}
 func TestBinarySearch_Int(t *testing.T) {
 	found, index := search(intDS[:], 5)
 	if !found || index != 2 {
-		t.Errorf("unable to find, got index %d", index)
+		t.Errorf("unable to find, index %d", index)
 	}
 }
 
@@ -26,7 +26,7 @@ func BenchmarkBinarySearch_Int(b *testing.B) {
 func TestBinarySearch_Float(t *testing.T) {
 	found, index := search(floatDS[:], 7.5)
 	if !found || index != 7 {
-		t.Errorf("unable to find, got index %d", index)
+		t.Errorf("unable to find, index %d", index)
 	}
 }
 
@@ -65,7 +65,7 @@ func BenchmarkBinarySearch_RecursionFloat(b *testing.B) {
 func TestBinarySearch_BuiltinInt(t *testing.T) {
 	index := sort.SearchInts(intDS[:], 5)
 	if index != 2 {
-		t.Errorf("unable to find, got index %d", index)
+		t.Errorf("unable to find, index %d", index)
 	}
 }
 
@@ -78,7 +78,7 @@ func BenchmarkBinarySearch_BuiltinInt(b *testing.B) {
 func TestBinarySearch_BuiltinFloat(t *testing.T) {
 	index := sort.SearchFloat64s(floatDS[:], 7.5)
 	if index != 7 {
-		t.Errorf("unable to find, got index %d", index)
+		t.Errorf("unable to find, index %d", index)
 	}
 }
 
@@ -91,7 +91,7 @@ func BenchmarkBinarySearch_BuiltinFloat(b *testing.B) {
 func TestBinarySearch_BuiltinString(t *testing.T) {
 	index := sort.SearchStrings(stringDS[:], "abc")
 	if index != 3 {
-		t.Errorf("got invalid index %d", index)
+		t.Errorf("incorrect index %d", index)
 	}
 }
 
