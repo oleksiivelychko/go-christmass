@@ -34,9 +34,9 @@ var costs = map[string]float64{
 }
 
 func TestDijkstraSearch(t *testing.T) {
-	cost := search(graph, costs)
-	if cost != 6 {
-		t.Errorf("incorrect cost %f", cost)
+	c := search(graph, costs)
+	if c != 6 {
+		t.Errorf("incorrect cost %f", c)
 	}
 }
 

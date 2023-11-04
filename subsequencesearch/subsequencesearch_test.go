@@ -15,14 +15,14 @@ h | 0 | 1 | 2 | 3 |       h | 0 | 0 | 1 | 2 |
 __|___|___|___|___|       __|___|___|___|___|
 */
 func TestSubsequencesSearch(t *testing.T) {
-	count := search("fish", "mish")
-	if count != 3 {
-		t.Errorf("mismatch count %d", count)
+	c := search("fish", "mish")
+	if c != 3 {
+		t.Errorf("mismatch count %d", c)
 	}
 
-	count = search("fish", "fosh")
-	if count != 2 {
-		t.Errorf("mismatch count %d", count)
+	c = search("fish", "fosh")
+	if c != 2 {
+		t.Errorf("mismatch count %d", c)
 	}
 }
 

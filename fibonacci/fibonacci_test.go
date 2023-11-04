@@ -5,7 +5,7 @@ import "testing"
 func TestFibonacci(t *testing.T) {
 	f := fibonacci()
 
-	tErr := func(num, expect int) { t.Errorf("[func Fibonacci() func() int] -> %d != %d", num, expect) }
+	tErr := func(num, expect int) { t.Errorf("[func fibonacci() func() int] -> %d != %d", num, expect) }
 
 	for i := 0; i < 10; i++ {
 		num := f()
