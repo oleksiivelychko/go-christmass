@@ -1,4 +1,4 @@
-package sort
+package bubblesort
 
 // sort O(n^2)
 func sort(ds []int) []int {
