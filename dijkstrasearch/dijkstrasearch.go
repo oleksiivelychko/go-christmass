@@ -7,11 +7,13 @@ package dijkstrasearch
 import "math"
 
 func search(g map[string]map[string]float64, costs map[string]float64) float64 {
-	// all vertices are marked as unprocessed by default
-	var processed []string
+	var (
+		// all vertices are marked as unprocessed by default
+		processed []string
+		// get first vertex with minimal cost
+		vertex = findLowestCostVertex(costs, processed)
+	)
 
-	// get first vertex with minimal cost
-	vertex := findLowestCostVertex(costs, processed)
 	// iterate over graph and try to reduce cost to achieve V(finish)
 	for vertex != "" {
 		neighbors := g[vertex]
@@ -36,8 +38,10 @@ func search(g map[string]map[string]float64, costs map[string]float64) float64 {
 }
 
 func findLowestCostVertex(costs map[string]float64, processed []string) string {
-	var lowest = math.Inf(1)
-	var lowestVertex = ""
+	var (
+		lowest       = math.Inf(1)
+		lowestVertex = ""
+	)
 
 	for vertex, cost := range costs {
 		// detect the lowest cost from unprocessed vertices
