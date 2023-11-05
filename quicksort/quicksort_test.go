@@ -18,7 +18,7 @@ func TestQuickSort(t *testing.T) {
 	)
 
 	if !reflect.DeepEqual(e, sorted) {
-		t.Errorf("expected %q, got %q", e, sorted)
+		t.Errorf("expected %v, got %v", e, sorted)
 	}
 }
 

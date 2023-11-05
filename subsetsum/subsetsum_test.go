@@ -35,6 +35,7 @@ func TestSubsetSum(t *testing.T) {
 
 func BenchmarkSubsetSum(b *testing.B) {
 	rand.NewSource(time.Now().Unix())
+
 	for i := 0; i < b.N; i++ {
 		set := rand.Perm(5)
 		subsetSum(set, len(set)-1, rand.Int())

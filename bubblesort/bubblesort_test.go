@@ -14,7 +14,7 @@ func TestBubbleSort(t *testing.T) {
 	)
 
 	if !reflect.DeepEqual(e, res) {
-		t.Errorf("expected %q, got %q", e, res)
+		t.Errorf("expected %v, got %v", e, res)
 	}
 }
 
