@@ -1,4 +1,4 @@
-package sort
+package quicksort
 
 // Worst case (pivot is the first) is O(n) * O(n) = O(n^2)
 // Best case (pivot is the middle) is O(n) * O(log n) = O(n log n)
@@ -7,9 +7,12 @@ func sort(ds []int) []int {
 		return ds
 	}
 
-	pivot := ds[0]
+	var (
+		pivot = ds[0]
+		head  []int
+		tail  []int
+	)
 
-	var head []int
 	for _, item := range ds[1:] {
 		// items that are smaller than pivot need to be moved before it
 		if item <= pivot {
@@ -17,7 +20,6 @@ func sort(ds []int) []int {
 		}
 	}
 
-	var tail []int
 	for _, item := range ds[1:] {
 		// items that are greater than pivot need to be moved after it
 		if item > pivot {
