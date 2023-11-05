@@ -16,9 +16,8 @@ var ds = map[string][]string{
 }
 
 func TestBreadthFirstSearch(t *testing.T) {
-	n := search(ds, "owl", "robin")
-	if n == "" {
-		t.Error("empty node")
+	if search(ds, "owl", "robin") == "" {
+		t.Error("unable to find")
 	}
 }
 
