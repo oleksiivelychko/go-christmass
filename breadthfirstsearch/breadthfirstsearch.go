@@ -5,8 +5,10 @@
 package breadthfirstsearch
 
 func search(g map[string][]string, search, start string) string {
-	var deque []string
-	var processed []string
+	var (
+		deque     []string
+		processed []string
+	)
 
 	// put successors of first node into deque
 	deque = append(deque, g[start]...)
