@@ -9,5 +9,6 @@ func sort(ds []int) []int {
 			}
 		}
 	}
+
 	return ds
 }

@@ -25,6 +25,7 @@ func search(g map[string][]string, search, start string) string {
 					return true
 				}
 			}
+
 			return false
 		}(processed, node) {
 			continue

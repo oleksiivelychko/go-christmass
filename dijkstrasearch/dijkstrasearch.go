@@ -51,6 +51,7 @@ func findLowestCostVertex(costs map[string]float64, processed []string) string {
 					return true
 				}
 			}
+
 			return false
 		}(processed, vertex) {
 			lowest = cost

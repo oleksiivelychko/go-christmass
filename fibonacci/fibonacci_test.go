@@ -14,30 +14,39 @@ func TestFibonacci(t *testing.T) {
 		if i == 0 && num != 0 {
 			tErr(0, num)
 		}
+
 		if i == 1 && num != 1 {
 			tErr(1, num)
 		}
+
 		if i == 2 && num != 1 {
 			tErr(1, num)
 		}
+
 		if i == 3 && num != 2 {
 			tErr(2, num)
 		}
+
 		if i == 4 && num != 3 {
 			tErr(3, num)
 		}
+
 		if i == 5 && num != 5 {
 			tErr(5, num)
 		}
+
 		if i == 6 && num != 8 {
 			tErr(8, num)
 		}
+
 		if i == 7 && num != 13 {
 			tErr(13, num)
 		}
+
 		if i == 8 && num != 21 {
 			tErr(21, num)
 		}
+
 		if i == 9 && num != 34 {
 			tErr(34, num)
 		}
