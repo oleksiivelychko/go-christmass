@@ -16,8 +16,10 @@ type number interface {
 // log2(8)=3 attempts are required to find value (operation opposite to exponentiation).
 // Dataset must be sorted and contains numbers only.
 func search[T number](ds []T, s T) (bool, int) {
-	var bottom = 0
-	var top = len(ds) - 1
+	var (
+		bottom = 0
+		top    = len(ds) - 1
+	)
 
 	for bottom < top {
 		// pick the middle item
@@ -39,10 +41,12 @@ func search[T number](ds []T, s T) (bool, int) {
 }
 
 func searchRecursion[T number](ds []T, s T) bool {
-	var bottom = 0
-	var top = len(ds) - 1
-	var middle = -1
-	var found = false
+	var (
+		bottom = 0
+		top    = len(ds) - 1
+		middle = -1
+		found  = false
+	)
 
 	if bottom < top {
 		middle = (bottom + top) / 2
