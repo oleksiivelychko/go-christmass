@@ -2,10 +2,13 @@ package insertionsort
 
 // sort O(n^2)
 func sort(ds []int) []int {
-	var sorted = make([]int, len(ds))
+	var (
+		lenDS  = len(ds)
+		sorted = make([]int, lenDS)
+	)
 
-	for i := 0; i < len(ds); i++ {
-		// get smallest item in dataset
+	for i := 0; i < lenDS; i++ {
+		// get smallest item from dataset
 		smallest := findSmallest(ds)
 		// put smallest item into dataset
 		sorted[i] = ds[smallest]
@@ -16,14 +19,16 @@ func sort(ds []int) []int {
 	return sorted
 }
 
-func findSmallest(dataset []int) int {
-	var index = 0
-	var smallest = dataset[0]
+func findSmallest(ds []int) int {
+	var (
+		index    = 0
+		smallest = ds[0]
+	)
 
-	for i := 1; i <= len(dataset)-1; i++ {
-		if dataset[i] < smallest {
+	for i := 1; i <= len(ds)-1; i++ {
+		if ds[i] < smallest {
 			index = i
-			smallest = dataset[i]
+			smallest = ds[i]
 		}
 	}
 
