@@ -11,9 +11,10 @@ import (
 )
 
 func TestSubsetSum(t *testing.T) {
-	ds := []int{3, 4, 5, 2}
-
-	tErr := func() { t.Error("unable to sum") }
+	var (
+		tErr = func() { t.Error("unable to sum") }
+		ds   = []int{3, 4, 5, 2}
+	)
 
 	if !subsetSum(ds, len(ds)-1, 9) {
 		tErr()
