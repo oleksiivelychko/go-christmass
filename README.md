@@ -22,7 +22,7 @@
 
 📌 [Subset sum](subsetsum)
 
-📌 [Tree_traversal](treetraversal)
+📌 [Tree traversal](treetraversal)
 
 ---
 ※ References:
