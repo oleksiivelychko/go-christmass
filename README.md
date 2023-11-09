@@ -26,4 +26,4 @@
 
 ---
 ※ References:
-- [Grokking Algorithms](https://www.oreilly.com/library/view/grokking-algorithms/9781617292231/)
+- [Grokking Algorithms](https://books.apple.com/us/book/grokking-algorithms/id1572387952)
