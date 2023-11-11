@@ -34,8 +34,6 @@ func TestQuickSort_BuiltinInt(t *testing.T) {
 	if !goSort.IntsAreSorted(intDS[:]) {
 		t.Error("unable to sort")
 	}
-
-	t.Log(intDS)
 }
 
 func BenchmarkQuickSort_BuiltinInt(b *testing.B) {
@@ -50,8 +48,6 @@ func TestQuickSort_BuiltinString(t *testing.T) {
 	if !goSort.StringsAreSorted(stringDS[:]) {
 		t.Error("unable to sort")
 	}
-
-	t.Log(stringDS)
 }
 
 func BenchmarkQuickSort_BuiltinString(b *testing.B) {
