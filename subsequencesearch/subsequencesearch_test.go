@@ -15,13 +15,11 @@ h | 0 | 1 | 2 | 3 |       h | 0 | 0 | 1 | 2 |
 __|___|___|___|___|       __|___|___|___|___|
 */
 func TestSubsequencesSearch(t *testing.T) {
-	count := search("fish", "mish")
-	if count != 3 {
+	if count := search("fish", "mish"); count != 3 {
 		t.Errorf("expected %d, got %d", 3, count)
 	}
 
-	count = search("fish", "fosh")
-	if count != 2 {
+	if count := search("fish", "fosh"); count != 2 {
 		t.Errorf("expected %d, got %d", 3, count)
 	}
 }

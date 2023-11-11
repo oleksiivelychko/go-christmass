@@ -14,8 +14,7 @@ func tree() *node {
 }
 
 func TestTreeTraversal(t *testing.T) {
-	sum := traverse(tree())
-	if sum != 21 {
+	if sum := traverse(tree()); sum != 21 {
 		t.Errorf("expected %d, got %d", 21, sum)
 	}
 }

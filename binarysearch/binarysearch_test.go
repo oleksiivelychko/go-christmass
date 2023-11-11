@@ -13,8 +13,7 @@ var (
 )
 
 func TestBinarySearch_Int(t *testing.T) {
-	ok, i := search(intDS[:], 5)
-	if !ok || i != 2 {
+	if ok, i := search(intDS[:], 5); !ok || i != 2 {
 		t.Errorf("expected %d, got %d", 2, i)
 	}
 }
@@ -26,8 +25,7 @@ func BenchmarkBinarySearch_Int(b *testing.B) {
 }
 
 func TestBinarySearch_Float(t *testing.T) {
-	ok, i := search(floatDS[:], 7.5)
-	if !ok || i != 7 {
+	if ok, i := search(floatDS[:], 7.5); !ok || i != 7 {
 		t.Errorf("expected %d, got %d", 7, i)
 	}
 }
@@ -63,8 +61,7 @@ func BenchmarkBinarySearch_RecursionFloat(b *testing.B) {
 }
 
 func TestBinarySearch_BuiltinInt(t *testing.T) {
-	i := sort.SearchInts(intDS[:], 5)
-	if i != 2 {
+	if i := sort.SearchInts(intDS[:], 5); i != 2 {
 		t.Errorf("expected %d, got %d", 2, i)
 	}
 }
@@ -76,8 +73,7 @@ func BenchmarkBinarySearch_BuiltinInt(b *testing.B) {
 }
 
 func TestBinarySearch_BuiltinFloat(t *testing.T) {
-	i := sort.SearchFloat64s(floatDS[:], 7.5)
-	if i != 7 {
+	if i := sort.SearchFloat64s(floatDS[:], 7.5); i != 7 {
 		t.Errorf("expected %d, got %d", 7, i)
 	}
 }
@@ -89,8 +85,7 @@ func BenchmarkBinarySearch_BuiltinFloat(b *testing.B) {
 }
 
 func TestBinarySearch_BuiltinString(t *testing.T) {
-	i := sort.SearchStrings(stringDS[:], "abc")
-	if i != 3 {
+	if i := sort.SearchStrings(stringDS[:], "abc"); i != 3 {
 		t.Errorf("expected %d, got %d", 3, i)
 	}
 }

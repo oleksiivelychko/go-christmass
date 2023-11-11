@@ -35,8 +35,7 @@ var (
 )
 
 func TestDijkstraSearch(t *testing.T) {
-	cost := search(graph, costs)
-	if cost != 6.0 {
+	if cost := search(graph, costs); cost != 6.0 {
 		t.Errorf("expected %f, got %f", 6.0, cost)
 	}
 }
