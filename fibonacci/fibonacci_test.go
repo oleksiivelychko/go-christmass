@@ -3,52 +3,49 @@ package fibonacci
 import "testing"
 
 func TestFibonacci(t *testing.T) {
-	var (
-		tErr = func(e, g int) { t.Errorf("expected %d, got %d", e, g) }
-		f    = fibonacci()
-	)
+	var f = fibonacci()
 
 	for i := 0; i < 10; i++ {
 		num := f()
 
 		if i == 0 && num != 0 {
-			tErr(0, num)
+			t.Errorf("expected %d, got %d", 0, num)
 		}
 
 		if i == 1 && num != 1 {
-			tErr(1, num)
+			t.Errorf("expected %d, got %d", 1, num)
 		}
 
 		if i == 2 && num != 1 {
-			tErr(1, num)
+			t.Errorf("expected %d, got %d", 1, num)
 		}
 
 		if i == 3 && num != 2 {
-			tErr(2, num)
+			t.Errorf("expected %d, got %d", 2, num)
 		}
 
 		if i == 4 && num != 3 {
-			tErr(3, num)
+			t.Errorf("expected %d, got %d", 3, num)
 		}
 
 		if i == 5 && num != 5 {
-			tErr(5, num)
+			t.Errorf("expected %d, got %d", 5, num)
 		}
 
 		if i == 6 && num != 8 {
-			tErr(8, num)
+			t.Errorf("expected %d, got %d", 8, num)
 		}
 
 		if i == 7 && num != 13 {
-			tErr(13, num)
+			t.Errorf("expected %d, got %d", 13, num)
 		}
 
 		if i == 8 && num != 21 {
-			tErr(21, num)
+			t.Errorf("expected %d, got %d", 21, num)
 		}
 
 		if i == 9 && num != 34 {
-			tErr(34, num)
+			t.Errorf("expected %d, got %d", 34, num)
 		}
 	}
 }
