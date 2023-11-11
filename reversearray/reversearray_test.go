@@ -15,7 +15,7 @@ func TestReverseArray(t *testing.T) {
 	)
 
 	if !reflect.DeepEqual(e, r) {
-		t.Error("unable to reverse")
+		t.Errorf("expected %v, got %v", e, r)
 	}
 }
 
